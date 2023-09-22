@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/player.css">
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Reproductor de Video</h1>
+        </header>
+    </div>
+    <div>
+        <main>
+            <textarea id="lyrics-input" placeholder="Ingresa la letra del video"></textarea>
+            <div id="video-container">
+                <!-- Aquí se cargará el reproductor de video de YouTube -->
+            </div>
+            
+            <button id="check-lyrics-button">Verificar Letra</button>
+            
+        </main>
+        <button onclick="goBackToSearch()">Volver al Buscador</button>
+    </div>
+
+    
+
+
+    <script src="../Backend/comparadorLetra/index.js">
+     
+    </script>
+</body>
+</html>
