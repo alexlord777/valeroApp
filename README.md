@@ -21,5 +21,6 @@ git push origin andres
 Al hacer esto estaras trabajando en la rama andres, cuando necesites mover a la rama principal solicita un pull request.
 
 
-
+pagina de la app
+https://magenta-hummingbird-c08528.netlify.app/index.html
 
