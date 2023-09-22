@@ -6,20 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.getElementById("results");
 
     searchButton.addEventListener("click", () => {
-        const searchTerm = searchInput.value.trim();
-        console.log(searchTerm);
-        if (searchTerm !== "") {
-            // Lógica para buscar videos en YouTube utilizando la API de YouTube Data
-            // Recibir los resultados y mostrarlos en "resultsContainer"
-            // Cada resultado debe incluir un enlace a la página del reproductor con el ID del video
-
-            searchYouTubeVideos(searchTerm);
-            
+        const video = searchInput.value.trim();
+        console.log(video);
+        if (video !== "") {
+            searchYouTubeVideos(video);
         }
     });
 
     function displaySearchResults(videos) {
-        resultsContainer.innerHTML = ""; // Limpia los resultados anteriores
+        resultsContainer.innerHTML = ""; 
     
         videos.forEach((video) => {
             const videoItem = document.createElement("div");
@@ -28,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${video.snippet.thumbnails.medium.url}" alt="Miniatura del Video">
                 <h3>${video.snippet.title}</h3>
                 <p>${video.snippet.description}</p>
-                <a href="player.html?videoId=${video.id.videoId}" target="_blank">Ver Video</a>
+                <a href="player.html?videoId=${video.id.videoId}" >Ver Video</a>
             `;
     
             resultsContainer.appendChild(videoItem);

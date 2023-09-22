@@ -1,12 +1,10 @@
-let videoPlayer; // Variable para almacenar el reproductor de video
+let videoPlayer; 
 
 document.addEventListener("DOMContentLoaded", () => {
     const videoId = getVideoIdFromUrl();
     if (videoId) {
         embedYouTubePlayer(videoId);
     } else {
-        // Manejar el caso en el que el ID del video no esté disponible
-        // Puedes redirigir al usuario a una página de error
     }
 });
 
@@ -17,7 +15,7 @@ function getVideoIdFromUrl() {
 }
 
 function embedYouTubePlayer(videoId) {
-    // Código para incrustar el reproductor de video de YouTube con el videoId
+    
     const videoContainer = document.getElementById("video-container");
     videoContainer.innerHTML = `
         <iframe
@@ -29,7 +27,6 @@ function embedYouTubePlayer(videoId) {
         ></iframe>
     `;
 
-    // Obtener el reproductor de video
     videoPlayer = videoContainer.querySelector("iframe");
 
     // Esperar 1 minuto y verificar la letra
@@ -50,4 +47,10 @@ function checkLyrics() {
     if (videoPlayer) {
         videoPlayer.src = "";
     }
+}
+
+
+function goBackToSearch() {
+    
+    window.location.href = "index.html"; 
 }
